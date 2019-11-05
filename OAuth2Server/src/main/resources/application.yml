@@ -1,0 +1,14 @@
+# TODO S3-1-2-1 서버포트
+server:
+  port: 8093
+  servlet:
+    context-path: /auth
+# TODO S3-1-2-2 어플리케이션명
+spring:
+  application:
+    name: OAuth2Server
+# TODO S3-1-2-3 유레카클라이언트
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8092/eureka/  
