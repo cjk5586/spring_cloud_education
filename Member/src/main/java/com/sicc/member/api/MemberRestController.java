@@ -49,7 +49,7 @@ public class MemberRestController {
 	@RequestMapping(path = "/getMemberAndWork/{sabun}/{workNum}", method = RequestMethod.GET)
 	public String getWorkInfo(@PathVariable String sabun, @PathVariable String workNum) {
 		String msg = "[ Member called Work ] : ";
-		return msg+workRemoteServiceImpl.getMemberAndWorkInfo(sabun, workNum);
+		return msg+workRemoteServiceImpl.getMemberAndWorkInfo(sabun, workNum); // TODO Step11-5 적용된 OAuth2RestTemplate 
 	}
 	
 	// work 마이크로서비스 정보 조회

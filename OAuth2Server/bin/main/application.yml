@@ -1,6 +1,6 @@
 # TODO S3-1-2-1 서버포트
 server:
-  port: 8093
+  port: 8094
   servlet:
     context-path: /auth
 # TODO S3-1-2-2 어플리케이션명

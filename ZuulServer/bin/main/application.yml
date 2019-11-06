@@ -20,6 +20,7 @@ zuul:
       path: /member/**
       service-id: member
       strip-prefix: false
+      sensitive-headers: Cookie, Set-Cookie # TODO S3-7-1-1
     work:
       path: /work/**
       service-id: work
