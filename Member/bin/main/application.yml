@@ -71,3 +71,9 @@ eureka:
       
 # feign hystrix
 feign:  hystrix:    enabled: true
+    
+# TODO S3-6-3-1 security 관련 설정
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:8093/auth/user
