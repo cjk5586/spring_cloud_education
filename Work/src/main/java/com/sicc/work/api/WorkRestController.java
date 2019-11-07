@@ -32,6 +32,7 @@ public class WorkRestController {
 	// 업무번호로 조회
 	@RequestMapping(path = "/{workNum}", method = RequestMethod.GET)
 	public WorkVO workSearch(@PathVariable String workNum) {
+		// TODO S1-4-1-3 Hystrix Timeout 테스트를 위한 시간지연 구현		
 		try {
 			int delayTime = 2; // 지연시간 2초 설정
 			for (int i = 1; i <= delayTime; i++) {
@@ -41,8 +42,8 @@ public class WorkRestController {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} 
-		// throw new RuntimeException("I/O ERROR"); // 강제 Runtime Exception을 발생 -> fallback 발생을 위함
-		return workServiceImpl.findByWorkNum(workNum); // 정상적으로 리턴하는 값
+		// throw new RuntimeException("I/O ERROR");		// TODO S1-4-1-1 Runtime Excpetion 주석 처리
+		return workServiceImpl.findByWorkNum(workNum); 	// TODO S1-4-1-2 정상 리턴값 주석 해제
 	}
 	
 	// 저장

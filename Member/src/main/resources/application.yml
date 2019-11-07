@@ -8,7 +8,7 @@ spring:  application:    name: member
     password: 
   h2:    console:      enabled: true
 
-# hystrix timeout 기본 1초 -> 3초
+# TODO S1-4-6-1 hystrix timeout (기본 1초 -> 10초)
 hystrix:
   command:
     default:
