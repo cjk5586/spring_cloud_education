@@ -21,7 +21,7 @@ public class WorkRemoteServiceImpl implements WorkRemoteService {
 	private RestTemplate restTemplate;
 
 	// work 마이크로서비스 정보 가져오기
-	@HystrixCommand(fallbackMethod = "getWorkInfoFallback") // hystrix 폴백 선언
+	@HystrixCommand(fallbackMethod = "getWorkInfoFallback") // TODO S1-3-4-1 hystrix 폴백 선언
 	@Override
 	public String getWorkInfo(String workNum) {
 		WorkVO workVO = new WorkVO();
@@ -38,7 +38,7 @@ public class WorkRemoteServiceImpl implements WorkRemoteService {
 		return workVO.toString();
 	}
 	
-	// hystrix 폴백 함수
+	// TODO S1-3-4-2 hystrix 폴백 정의
 	public String getWorkInfoFallback(String workNum, Throwable t) {
 		String errMsg = "[ Work dosen't work. fallback occurs. ] : "+t;
 		return errMsg;

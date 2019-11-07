@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sicc.member.service.MemberServiceImpl;
 import com.sicc.member.service.WorkRemoteServiceImpl;
 import com.sicc.member.vo.MemberVO;
-import com.sicc.member.vo.WorkVO;
 
 /**
  * 사용자 정보 Rest API

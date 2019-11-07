@@ -32,8 +32,8 @@ public class WorkRestController {
 	// 업무번호로 조회
 	@RequestMapping(path = "/{workNum}", method = RequestMethod.GET)
 	public WorkVO workSearch(@PathVariable String workNum) {
-		throw new RuntimeException("I/O ERROR"); // 강제 Runtime Exception을 발생 -> fallback 발생을 위함
-		// return workServiceImpl.findByWorkNum(workNum); // 정상적으로 리턴하는 값 -> fallback 테스트를 위해 주석 처리함
+		// return workServiceImpl.findByWorkNum(workNum); // TODO S1-3-5-1 fallback 테스트를 위한 주석 처리
+		throw new RuntimeException("I/O ERROR"); // TODO S1-3-5-2 강제 Runtime Exception 발생 (fallback 테스트 용)
 	}
 	
 	// 저장
