@@ -6,13 +6,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * Member Micro Service
- * 사용자 관련 마이크로서비스
+ * 사용자 관련 마이크로서비스 시작점
  * @author Woongs
  */
 @SpringBootApplication
 public class MemberApplication {
-	@Bean // work 마이크로서비스와 통신을 위한 RestTemplate
+	// TODO S1-2-1-1 Work 마이크로서비스와 통신을 위한 RestTemplate
+	@Bean 
 	public RestTemplate restTemplate() {
 		return new RestTemplate();
 	}

@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sicc.member.service.MemberServiceImpl;
 import com.sicc.member.service.WorkRemoteServiceImpl;
 import com.sicc.member.vo.MemberVO;
-import com.sicc.member.vo.WorkVO;
 
 /**
  * 사용자 정보 Rest API
@@ -22,14 +21,16 @@ import com.sicc.member.vo.WorkVO;
 public class MemberRestController {
 	@Autowired
 	MemberServiceImpl memberServiceImpl;	// 사용자 CRUD를 위한 구현체
-	
-	@Autowired
-	WorkRemoteServiceImpl workRemoteServiceImpl;	// 업무 정보를 위한 구현체
 
-	// work 마이크로서비스 정보 조회
+	// TODO S1-2-4-1 Work와 통신을 위한 구현체 사용
+	@Autowired
+	WorkRemoteServiceImpl workRemoteServiceImpl;
+
+	// TODO S1-2-4-2 Work와 통신을 위한 REST API 구현
 	@RequestMapping(path = "/getWork/{workNum}", method = RequestMethod.GET)
 	public String getWorkInfo(@PathVariable String workNum) {
-		return workRemoteServiceImpl.getWorkInfo(workNum);
+		String msg = "[ Member called Work ] : ";
+		return msg + workRemoteServiceImpl.getWorkInfo(workNum);
 	}
 	
 	// 전체 조회
