@@ -27,9 +27,10 @@ public class MemberRestController {
 	@Autowired
 	WorkRemoteServiceImpl workRemoteServiceImpl;	// 업무 정보를 위한 구현체
 
-	private final FeignWorkRemoteService feignWorkRemoteService; // feign service
+	// TODO S2-1-4-2 Feign 사용을 위한 서비스 선언
+	private final FeignWorkRemoteService feignWorkRemoteService;
 
-	// 생성자
+	// TODO S2-1-4-2 Feign 사용을 위한 서비스 초기화
 	public MemberRestController(FeignWorkRemoteService feignWorkRemoteService) {
 		this.feignWorkRemoteService = feignWorkRemoteService;
 	}
@@ -56,11 +57,12 @@ public class MemberRestController {
 	@RequestMapping(path = "/getWork/{workNum}", method = RequestMethod.GET)
 	public String getWorkInfo(@PathVariable String workNum) {
 		String msg = "[ Member called Work ] : ";
-		return msg+getWorkInfoByFeign(workNum); // feign 적용
+		// TODO S2-1-4-2 기존 결과값 주석 처리 및 Feign 적용 
+		return msg+getWorkInfoByFeign(workNum);
 		// return msg+workRemoteServiceImpl.getWorkInfo(workNum);
 	}
 
-	// feigin을 통한 work정보 조회
+	// TODO S2-1-4-2 Feign을 통한 work정보 조회
 	public String getWorkInfoByFeign(String workNum) {
 		WorkVO workVO = feignWorkRemoteService.getWorkInfoByFeign(workNum);
 		return workVO.toString();

@@ -14,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
  * 사용자 관련 마이크로서비스
  * @author Woongs
  */
-@EnableFeignClients		// feign 사용
+@EnableFeignClients		// TODO S2-1-3-2 feign 사용
 @EnableEurekaClient		// eureka client
 @EnableCircuitBreaker	// hysrix circuitbreaker 사용
 @SpringBootApplication
