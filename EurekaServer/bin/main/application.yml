@@ -1,3 +1,4 @@
+# TODO S1-10-2-1 서버포트, 어플리케이션명 설정, 대시보드를 위한 freemaker path 설정
 server:
   port: 8092
 
@@ -5,12 +6,11 @@ spring:
   application:
     name: EurekaServer
 
-# eureka dashboard를 위한 freemaker path 설정
   freemarker:
     template-loader-path: classpath:/templates/
     prefer-file-system-access: false
 
-# eureka 설정
+# TODO S1-10-2-1 eureka 관련 설정
 eureka:
   instance:
     hostname: localhost

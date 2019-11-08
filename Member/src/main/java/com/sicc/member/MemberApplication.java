@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
  * 사용자 관련 마이크로서비스
  * @author Woongs
  */
-@EnableEurekaClient		// eureka client
+@EnableEurekaClient		// TODO S1-11-1-2 eureka client 선언
 @EnableCircuitBreaker	// hysrix circuitbreaker 사용
 @SpringBootApplication
 public class MemberApplication {

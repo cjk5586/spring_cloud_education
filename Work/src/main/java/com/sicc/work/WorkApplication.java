@@ -9,7 +9,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * 업무 관련 마이크로서비스
  * @author Woongs
  */
-@EnableEurekaClient
+@EnableEurekaClient // TODO S1-11-1-2 eureka-client
 @SpringBootApplication
 public class WorkApplication {
 

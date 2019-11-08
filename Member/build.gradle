@@ -25,7 +25,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'			// actuator
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-ribbon'	// ribbon
 	implementation 'org.springframework.retry:spring-retry:1.2.4.RELEASE'			// retry
-	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client' // eureka-client
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client' // TODO S1-11-1-1 eureka-client 의존선 선언
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'	// test
 }
 
