@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author Woongs
  */
 //@FeignClient(name = "work", url = "http://localhost:8082/") // Feign 만
-//@FeignClient(name = "work") // Feign + Eureka + Ribbon
-//@FeignClient(name = "work", fallback = FeignWorkRemoteFallback.class) // Feign + Eureka + Ribbon
+//@FeignClient(name = "work") // TODO S2-2-1-1 Feign + Eureka + Ribbon
+//@FeignClient(name = "work", fallback = FeignWorkRemoteFallback.class) // TODO S2-2-6-1 선언한 Fallback 적용
 @FeignClient(name = "work", fallbackFactory = FeignWorkRemoteFallbackFactory.class) // Feign + Eureka + Ribbon
 public interface FeignWorkRemoteService {
 	@RequestMapping(path = "/work/toString/{workNum}")

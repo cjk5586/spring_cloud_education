@@ -10,6 +10,7 @@ import feign.hystrix.FallbackFactory;
  * Feign으로 work호출 fallback factory (fallback 원인파악을 위함)
  * @author Woongs
  */
+// TODO S2-2-8-1 Feign Fallback Exception 원인 파악을 위한 클래스 생성
 @Component
 public class FeignWorkRemoteFallbackFactory implements FallbackFactory<FeignWorkRemoteService> {
 	@Override
@@ -18,4 +19,3 @@ public class FeignWorkRemoteFallbackFactory implements FallbackFactory<FeignWork
 		return workNum -> errMsg;
 	}
 }
-
