@@ -23,7 +23,8 @@ dependencies {
 
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix' // hystrix
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'			// actuator
-	implementation 'org.springframework.retry:spring-retry:1.2.4.RELEASE'			// retry
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-ribbon'	// TODO S1-8-2-1 ribbon 의존성 추가
+	implementation 'org.springframework.retry:spring-retry:1.2.4.RELEASE'			// TODO S1-9-1-1 retry 의존성 추가
 	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'			// test
 }

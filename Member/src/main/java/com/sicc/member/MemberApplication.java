@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableCircuitBreaker // hysrix circuitbreaker 사용
 @SpringBootApplication
 public class MemberApplication {
-	@LoadBalanced // ribbon 사용을 위함
+	@LoadBalanced // TODO S1-8-2-2 ribbon 사용
 	@Bean // work 마이크로서비스와 통신을 위한 RestTemplate
 	public RestTemplate restTemplate() {
 		return new RestTemplate();

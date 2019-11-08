@@ -17,6 +17,7 @@ import com.sicc.member.vo.WorkVO;
  */
 @Service
 public class WorkRemoteServiceImpl implements WorkRemoteService {
+	// TODO S1-8-2-3 기존 URL 주석처리, 새로운 URL 추가
 	//public static final String URL = "http://localhost:8082/work/";
 	public static final String URL = "http://work/work/";
 	
