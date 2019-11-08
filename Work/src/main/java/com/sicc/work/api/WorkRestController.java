@@ -32,6 +32,7 @@ public class WorkRestController {
 	// 업무번호로 조회
 	@RequestMapping(path = "/{workNum}", method = RequestMethod.GET)
 	public WorkVO workSearch(@PathVariable String workNum) {
+		// TODO S1-6-3-1 Thread.sleep, return 값 주석 처리, Runtime Exception 주석 해제
 		/*
 		throw new RuntimeException("I/O ERROR"); // 강제 Runtime Exception을 발생 -> fallback 발생을 위함
 		try {

@@ -12,15 +12,16 @@ repositories {
 	mavenCentral()
 }
 
+// TODO S1-7-6-1 Spring Cloud 버젼 변경
 ext {
 	set('springCloudVersion', "Greenwich.SR3")
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-actuator'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix-dashboard'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'						// actuator
+	implementation 'org.springframework.boot:spring-boot-starter-web'							// web
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix-dashboard'	// hystrix dashboard
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'						// test
 }
 
 dependencyManagement {

@@ -26,6 +26,7 @@ public class WorkRemoteServiceImpl implements WorkRemoteService {
 	MemberRepository memberRepository;
 	
 	// work 마이크로서비스 정보 가져오기
+	// TODO S1-5-2-1 commandkey로 Circuit명칭 설정 
 	@HystrixCommand(commandKey = "getWorkInfo", fallbackMethod = "getWorkInfoFallback") // hystrix 폴백 선언
 	@Override
 	public String getWorkInfo(String workNum) {
@@ -49,7 +50,7 @@ public class WorkRemoteServiceImpl implements WorkRemoteService {
 		return errMsg;
 	}
 	
-	// member, work 마이크로서비스 정보 가져오기	
+	// TODO S1-7-3-1 member, work 마이크로서비스 정보 가져오기
 	@HystrixCommand(commandKey = "getMemberAndWorkInfo", fallbackMethod = "getMemberAndWorkInfoFallback") // hystrix 폴백 선언
 	public String getMemberAndWorkInfo(String sabun, String workNum) {
 		WorkVO workVO = new WorkVO();
@@ -69,7 +70,7 @@ public class WorkRemoteServiceImpl implements WorkRemoteService {
 		return memberVO.toString()+workVO.toString();
 	}
 	
-	// member, work 마이크로서비스 정보 가져오기 폴백
+	// TODO S1-7-3-2 member, work 마이크로서비스 정보 가져오기 폴백
 	public String getMemberAndWorkInfoFallback(String sabun, String workNum, Throwable t) {
 		String errMsg = "[ Work dosen't work. getMemberAndWork fallback occurs. ] : "+t;
 		return errMsg;

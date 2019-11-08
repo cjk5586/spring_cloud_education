@@ -13,7 +13,7 @@ spring:
     console:
       enabled: true
 
-# hystrix dashborad 가시화를 위한 설정
+# TODO S1-7-6-5 hystrix dashborad 가시화를 위한 설정
 management:
   endpoints:
     web:

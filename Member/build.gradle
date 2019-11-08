@@ -1,5 +1,5 @@
 plugins {
-	id 'org.springframework.boot' version '2.2.0.RELEASE'
+	id 'org.springframework.boot' version '2.1.3.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
 }
@@ -22,11 +22,8 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'											// h2 database
 
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix' // hystrix
-	implementation 'org.springframework.boot:spring-boot-starter-actuator'			// actuator
-
-	testImplementation('org.springframework.boot:spring-boot-starter-test') {
-		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-	}
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'			// TODO S1-7-6-4 HystrixDashboard에 정보 추가를 위한 actuator
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'			// test
 }
 
 dependencyManagement {

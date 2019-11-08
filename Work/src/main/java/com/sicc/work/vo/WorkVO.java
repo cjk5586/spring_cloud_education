@@ -32,7 +32,7 @@ public class WorkVO {
 
 	// 기본 생성자
 	public WorkVO() {
-		// TODO Auto-generated constructor stub
+
 	}
 
 	// 생성자

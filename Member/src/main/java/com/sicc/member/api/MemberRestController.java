@@ -26,7 +26,7 @@ public class MemberRestController {
 	@Autowired
 	WorkRemoteServiceImpl workRemoteServiceImpl;	// 업무 정보를 위한 구현체
 
-	// member, work 마이크로서비스 정보 조회
+	// TODO S1-7-4-1 member, work 마이크로서비스 정보 조회
 	@RequestMapping(path = "/getMemberAndWork/{sabun}/{workNum}", method = RequestMethod.GET)
 	public String getWorkInfo(@PathVariable String sabun, @PathVariable String workNum) {
 		String msg = "[ Member called Work ] : ";
