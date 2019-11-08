@@ -1,3 +1,5 @@
+# TODO S3-3-3-1 서버포트, 어플리케이션명, 유레카 서버 path설정, Zuul 라우트 path 설정
+
 # server port
 server:
   port: 8093
