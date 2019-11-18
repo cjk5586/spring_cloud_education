@@ -21,6 +21,18 @@ public class WorkRestController {
 	@Autowired
 	WorkServiceImpl workServiceImpl;	// 사용자 CRUD를 위한 구현체
 	
+	// 테스트 데이터 생성/저장
+	@RequestMapping(path = "/testData", method = RequestMethod.GET)
+	public WorkVO workTestData() {
+		WorkVO workVO = new WorkVO();
+		workVO.setWorkNum("1");
+		workVO.setTitle("springcloud");
+		workVO.setContents("education");
+		workVO.setPriority("asap");
+		
+		return workServiceImpl.save(workVO); // 조회된 리스트가 있을때
+	}
+	
 	// 전체 조회
 	@RequestMapping(path = "/all", method = RequestMethod.GET)
 	public List<WorkVO> workSearchAll() {
