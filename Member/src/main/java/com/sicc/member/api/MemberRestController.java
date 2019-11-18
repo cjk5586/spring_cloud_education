@@ -40,6 +40,16 @@ public class MemberRestController {
 		return msg+workRemoteServiceImpl.getWorkInfo(workNum);
 	}
 	
+	// 테스트 데이터 생성/저장
+	@RequestMapping(path= "/testData", method = RequestMethod.GET)
+	public MemberVO memberTestData() {
+		MemberVO memberVO = new MemberVO();
+		memberVO.setSabun("11111");
+		memberVO.setName("msa");
+		memberVO.setDivision("sd");
+		return memberServiceImpl.save(memberVO);
+	}
+	
 	// 전체 조회
 	@RequestMapping(path = "/all", method = RequestMethod.GET)
 	public List<MemberVO> memberSearchAll() {
