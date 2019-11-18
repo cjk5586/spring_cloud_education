@@ -2,6 +2,8 @@ package com.sicc.work.api;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,8 +20,11 @@ import com.sicc.work.vo.WorkVO;
 @RestController
 @RequestMapping("/work")
 public class WorkRestController {
+	
 	@Autowired
 	WorkServiceImpl workServiceImpl;	// 사용자 CRUD를 위한 구현체
+
+	private static final Logger logger = LoggerFactory.getLogger(WorkRestController.class); // 로그
 	
 	// 테스트 데이터 생성/저장
 	@RequestMapping(path = "/testData", method = RequestMethod.GET)
@@ -49,7 +54,7 @@ public class WorkRestController {
 			int delayTime = 2; // 지연시간 2초 설정
 			for (int i = 1; i <= delayTime; i++) {
 				Thread.sleep(1000*delayTime); // 지연 2초 발생
-				System.out.println(i+"초 지연...");
+				logger.info("********" + i + "초 지연...");
 			}
 		} catch (InterruptedException e) {
 			e.printStackTrace();
