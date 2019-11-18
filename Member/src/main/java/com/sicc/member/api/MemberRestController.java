@@ -26,6 +26,16 @@ public class MemberRestController {
 	@Autowired
 	WorkRemoteServiceImpl workRemoteServiceImpl;
 
+	// 테스트 데이터 생성/저장
+	@RequestMapping(path= "/testData", method = RequestMethod.GET)
+	public MemberVO memberTestData() {
+		MemberVO memberVO = new MemberVO();
+		memberVO.setSabun("11111");
+		memberVO.setName("msa");
+		memberVO.setDivision("sd");
+		return memberServiceImpl.save(memberVO);
+	}
+	
 	// TODO S1-2-4-2 Work와 통신을 위한 REST API 구현
 	@RequestMapping(path = "/getWork/{workNum}", method = RequestMethod.GET)
 	public String getWorkInfo(@PathVariable String workNum) {
