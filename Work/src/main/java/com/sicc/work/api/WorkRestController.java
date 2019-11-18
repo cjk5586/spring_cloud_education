@@ -21,6 +21,8 @@ public class WorkRestController {
 	@Autowired
 	WorkServiceImpl workServiceImpl;	// 사용자 CRUD를 위한 구현체
 	
+	private static final Logger logger = LoggerFactory.getLogger(WorkRestController.class); // 로그
+	
 	// test 데이터 생성/저장
 	@RequestMapping(path = "/testData", method = RequestMethod.GET)
 	public WorkVO workTestData() {
@@ -60,7 +62,7 @@ public class WorkRestController {
 			int delayTime = 2; // 지연시간 2초 설정
 			for (int i = 1; i <= delayTime; i++) {
 				Thread.sleep(1000*delayTime); // 지연 2초 발생
-				System.out.println(i+"초 지연...");
+				logger.info("********" + i + "초 지연...");
 			}
 		} catch (InterruptedException e) {
 			e.printStackTrace();
