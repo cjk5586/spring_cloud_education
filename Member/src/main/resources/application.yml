@@ -27,7 +27,7 @@ hystrix:
       metrics: #circuit breaker가 10초내
         rollingStats:
           timeInMilliseconds: 10000
-      # TODO S1-5-2-1
+      # TODO S1-6-2-1
       circuitBreaker: #circuitBreaker 설정 (5초내 요청수 : 기본 20 -> 5개, 실패확률 : 기본 50%)
         requestVolumeThreshold: 5
         errorThresholdPercentage: 50
