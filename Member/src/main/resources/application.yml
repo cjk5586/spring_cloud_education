@@ -3,12 +3,17 @@ server:
   port: 8081
 
 # 마이크로서비스 명칭, DB 설정  
-spring:  application:    name: member
-  datasource:    url: jdbc:h2:mem:testdb
+spring:
+  application:
+    name: member
+  datasource:
+    url: jdbc:h2:mem:testdb
     driver-class-name: org.h2.Driver
     username: sa
     password: 
-  h2:    console:      enabled: true
+  h2:
+    console:
+      enabled: true
 
 # hystrix timeout 기본 1초 -> 3초
 hystrix:
@@ -22,7 +27,7 @@ hystrix:
       metrics: #circuit breaker가 10초내
         rollingStats:
           timeInMilliseconds: 10000
-      # TODO S1-6-2-1
+      # TODO S1-5-2-1
       circuitBreaker: #circuitBreaker 설정 (5초내 요청수 : 기본 20 -> 5개, 실패확률 : 기본 50%)
         requestVolumeThreshold: 5
         errorThresholdPercentage: 50
@@ -41,4 +46,9 @@ hystrix:
         errorThresholdPercentage: 50
         
 # TODO S1-7-6-5 hystrix dashborad 가시화를 위한 설정
-management:  endpoints:    web:      exposure:        include:        - "*"
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"
