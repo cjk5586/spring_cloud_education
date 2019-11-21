@@ -11,4 +11,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8092/eureka/  
+      defaultZone: http://localhost:8092/eureka/
+# 서명키 값
+signing:
+  key: 345345fsdfsf5345
