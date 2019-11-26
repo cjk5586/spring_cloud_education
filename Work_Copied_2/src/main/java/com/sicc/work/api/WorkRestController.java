@@ -53,20 +53,7 @@ public class WorkRestController {
 	@RequestMapping(path = "/{workNum}", method = RequestMethod.GET)
 	public WorkVO workSearch(@PathVariable String workNum) {
 		logger.debug(">>> WorkRestController's workSearch is called : "+serverPort); // 서버포트 출력 Ribbon 확인을 위함
-		// TODO S1-8-1-1 Runtime Exception, Sleep 주석 처리, return값 주석 해제 
 		return workServiceImpl.findByWorkNum(workNum); // 정상적으로 리턴하는 값
-		/*
-		throw new RuntimeException("I/O ERROR"); // 강제 Runtime Exception을 발생 -> fallback 발생을 위함
-		try {
-			int delayTime = 2; // 지연시간 2초 설정
-			for (int i = 1; i <= delayTime; i++) {
-				Thread.sleep(1000*delayTime); // 지연 2초 발생
-				logger.info("********" + i + "초 지연...");
-			}
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		*/
 	}
 	
 	// 저장

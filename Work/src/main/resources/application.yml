@@ -1,14 +1,18 @@
+# 서버 포트
 server:
   port: 8082
-  
+
+# 어플리케이션명  
 spring:
   application:
     name: work
+# datasource 설정
   datasource:
     url: jdbc:h2:mem:testdb
     driver-class-name: org.h2.Driver
     username: sa
     password: 
+# h2 콘솔 사용 여부
   h2:
     console:
       enabled: true
@@ -20,3 +24,11 @@ management:
       exposure:
         include:
         - "*"
+
+# restcontroller의 로그 DEBUG 레벨로 설정
+logging:
+  level:
+    com:
+      sicc:
+        work:
+          api: DEBUG

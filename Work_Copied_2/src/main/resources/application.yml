@@ -1,11 +1,11 @@
 # 서버 포트
 server:
-  port: 8082
+  port: 8084
 
 # 어플리케이션명  
 spring:
   application:
-    name: work
+    name: work_copied_2
 # datasource 설정
   datasource:
     url: jdbc:h2:mem:testdb
@@ -25,7 +25,7 @@ management:
         include:
         - "*"
 
-# restcontroller의 로그 DEBUG 레벨로 설정
+# logging level을 web에 관련하여 DEBUG까지
 logging:
   level:
     com:
