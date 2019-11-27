@@ -42,10 +42,10 @@ hystrix:
 management:  endpoints:    web:      exposure:        include:        - "*"
 
 # ribbon 관련
+# TODO S1-8-2-4 ribbon 설정
+# TODO S1-9-2-1 동일한 서버로 재시도 횟수, 실패시 다른 서버로 재시작 횟수
 work:
-  # TODO S1-8-2-4 ribbon 설정
   ribbon:
     listOfServers: localhost:8082, localhost:8083, localhost:8084, localhost:7777
-    # TODO S1-9-2-1 동일한 서버로 재시도 횟수, 실패시 다른 서버로 재시작 횟수
-    MaxAutoRetries: 0
-    MaxAutoRetriesNextServer: 1 
+    MaxAutoRetries: 0 # 동일 서버에 재시도 횟수
+    MaxAutoRetriesNextServer: 1 # 실패시 다른 서버로 재시작 횟수
