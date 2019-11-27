@@ -10,8 +10,8 @@ import com.sicc.member.vo.WorkVO;
  * @author Woongs
  */
 // TODO S2-1-4-1 Feign 사용을 위한 인터페이스 생성
-@FeignClient(name = "work", url = "http://localhost:8082/work/")
+@FeignClient(name = "work", url = "http://localhost:8082/")
 public interface FeignWorkRemoteService {
-	@RequestMapping(path = "/{workNum}")
-	WorkVO getWorkInfoByFeign(@PathVariable(value="workNum") String workNum);
+	@RequestMapping(path = "/work/toString/{workNum}")
+	String getWorkInfoByFeign(@PathVariable("workNum") String workNum);
 }

@@ -2,6 +2,8 @@ package com.sicc.work.api;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +24,13 @@ public class WorkRestController {
 	WorkServiceImpl workServiceImpl;	// 사용자 CRUD를 위한 구현체
 	
 	private static final Logger logger = LoggerFactory.getLogger(WorkRestController.class); // 로그
+		
+	// String으로써 업무번호로 조회
+	@RequestMapping(path = "/toString/{workNum}", method = RequestMethod.GET)
+	public String workSearchAsString(@PathVariable String workNum) {
+		WorkVO workVO = workServiceImpl.findByWorkNum(workNum);
+		return workVO.toString();
+	}
 	
 	// test 데이터 생성/저장
 	@RequestMapping(path = "/testData", method = RequestMethod.GET)
