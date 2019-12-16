@@ -15,6 +15,10 @@ import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenCo
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import java.util.Arrays;
 
+/**
+ * 
+ * @author Woongs
+ */
 @Configuration
 public class JWTOAuth2Config extends AuthorizationServerConfigurerAdapter {
 

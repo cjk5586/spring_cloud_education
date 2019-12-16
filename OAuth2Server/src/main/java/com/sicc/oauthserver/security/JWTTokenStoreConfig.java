@@ -13,7 +13,7 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 import com.sicc.oauthserver.config.ServiceConfig;
 
 /**
- * JWT 토큰 생성 및 해석하는 방법 지정
+ * JWT 토큰을 생성, 서명, 변환을 관리하는 방법을 정의
  * @author Woongs
  */
 @Configuration
