@@ -13,8 +13,13 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
 	@Override
 	public void configure(HttpSecurity http) throws Exception {
 		http
-			.authorizeRequests()
-			.anyRequest()
-			.authenticated();
+		.authorizeRequests()
+			// resource에 접근시 모든 역할 가능
+			.antMatchers("/resource/**").permitAll()
+			// GET 요청으로 /member/** 접근시 USER, ADMIN 역할만 요청 가능
+			.antMatchers(HttpMethod.GET, "/member/**").hasAnyRole("USER", "ADMIN")
+			// POST 요청으로 /member/** 접근시 ADMIN 역할만 요청 가능
+			.antMatchers(HttpMethod.POST, "/member/**").hasRole("ADMIN")
+		.anyRequest().authenticated(); // 모든 요청은 인증받은 사용자만
 	}
 }
