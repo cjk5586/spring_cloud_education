@@ -21,10 +21,10 @@ management:
         include:
         - "*"
 
-# TODO S1-11-1-3 eureka client 설정 적용
+# TODO S1-11-1-3 eureka client 관련 설정
 eureka:
   client:
-    service-url:
-      default-zone: http://localhost:8761/eureka
+    serviceUrl:
+      defaultZone: http://localhost:8092/eureka/
   instance:
     prefer-ip-address: true
