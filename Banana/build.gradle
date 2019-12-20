@@ -1,5 +1,5 @@
 plugins {
-	id 'org.springframework.boot' version '2.1.11.RELEASE'
+	id 'org.springframework.boot' version '2.1.3.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
 }
@@ -13,7 +13,7 @@ repositories {
 }
 
 ext {
-	set('springCloudVersion', "Greenwich.SR4")
+	set('springCloudVersion', "Greenwich.SR3")
 }
 
 dependencies {
@@ -27,4 +27,8 @@ dependencyManagement {
 	imports {
 		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
 	}
+}
+
+test {
+	useJUnitPlatform()
 }

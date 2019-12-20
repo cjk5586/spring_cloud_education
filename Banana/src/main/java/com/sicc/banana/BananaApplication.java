@@ -19,8 +19,9 @@ public class BananaApplication {
 	public String index() {
 		return msg;
 	}
-
+	
 	public static void main(String[] args) {
 		SpringApplication.run(BananaApplication.class, args);
 	}
+
 }
