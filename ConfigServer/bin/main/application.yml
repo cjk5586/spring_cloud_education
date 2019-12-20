@@ -10,8 +10,8 @@ spring:
         encrypt:
           enabled: false
         git:
-          uri: https://github.com/cjk5586/configRepository.gitd
+          uri: https://github.com/sicc-msa-poc/spring_cloud_config_repository
           search-paths: apple, banana
-          username: cjk5586
-          password: vision2017#  
+          username: sicc-msa-poc
+          password: siccmsapoc201905! 
 
