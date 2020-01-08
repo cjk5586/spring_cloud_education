@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * 사용자 관련 마이크로서비스 시작점 1
+ * 사용자 관련 마이크로서비스 시작점
  * @author Woongs
  */
 @SpringBootApplication
