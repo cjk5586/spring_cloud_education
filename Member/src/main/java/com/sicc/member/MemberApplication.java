@@ -11,6 +11,7 @@ import org.springframework.web.client.RestTemplate;
  */
 @SpringBootApplication
 public class MemberApplication {
+	// hello works?
 	// TODO S1-2-1-1 Work 마이크로서비스와 통신을 위한 RestTemplate
 	@Bean 
 	public RestTemplate restTemplate() {
